@@ -57,7 +57,7 @@ const Common = () => {
       setErrorValue(inputValue / 100);
     };
     try {
-      const response = await axios.post('http://localhost:3030/users', { 'region': selectedRegion, 'seed': Number(seedValue), 'errors': errorValue, 'length': lengthUsers });
+      const response = await axios.post('http://185.225.34.191:3030/users', { 'region': selectedRegion, 'seed': Number(seedValue), 'errors': errorValue, 'length': lengthUsers });
       setAllUsers(response.data)
     } catch (e) {
       console.log(e)
